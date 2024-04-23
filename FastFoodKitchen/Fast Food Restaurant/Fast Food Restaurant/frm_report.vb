@@ -20,13 +20,23 @@ Public Class frm_report
             cmd = New MySqlCommand("SELECT `transno`, `transdate`, `transmonth`, `foodcode`, `foodname`, `price`, `qty`, `totalprice`, `grandtotal` FROM `tbl_pos`", conn)
             dr = cmd.ExecuteReader
             While dr.Read
-                DataGridView1.Rows.Add(DataGridView1.Rows.Count + 1, dr.Item("transdate"), dr.Item("transno"), dr.Item("transmonth"), dr.Item("foodcode"), dr.Item("foodname"), dr.Item("price"), dr.Item("qty"), dr.Item("totalprice"), dr.Item("grandtotal"))
+                ' Format the price with the Nepalese Rupee symbol
+                Dim price As Decimal = dr.Item("price")
+                Dim formattedPrice As String = "रु " & price.ToString("N2")
+                Dim totalPrice As Decimal = dr.Item("totalprice")
+                Dim formattedTotalPrice As String = "रु " & totalPrice.ToString("N2")
+                Dim grandTotal As Decimal = dr.Item("grandtotal")
+                Dim formattedGrandTotal As String = "रु " & grandTotal.ToString("N2")
+
+                DataGridView1.Rows.Add(DataGridView1.Rows.Count + 1, dr.Item("transdate"), dr.Item("transno"), dr.Item("transmonth"), dr.Item("foodcode"), dr.Item("foodname"), formattedPrice, dr.Item("qty"), formattedTotalPrice, formattedGrandTotal)
             End While
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
         conn.Close()
     End Sub
+
+
 
     Private Sub txt_search_TextChanged(sender As Object, e As EventArgs) Handles txt_search.TextChanged
         DataGridView1.Rows.Clear()

@@ -241,20 +241,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Acer\\.nuget\\packages\\": {}
+    "C:\\Users\\pratik\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Acer\\Desktop\\FastFoodKitchen\\Fast Food Restaurant\\Fast Food Restaurant\\Fast Food Restaurant.vbproj",
+      "projectUniqueName": "C:\\Users\\pratik\\Desktop\\restaurantbilling-main\\FastFoodKitchen\\Fast Food Restaurant\\Fast Food Restaurant\\Fast Food Restaurant.vbproj",
       "projectName": "Fast Food Restaurant",
-      "projectPath": "C:\\Users\\Acer\\Desktop\\FastFoodKitchen\\Fast Food Restaurant\\Fast Food Restaurant\\Fast Food Restaurant.vbproj",
-      "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Acer\\Desktop\\FastFoodKitchen\\Fast Food Restaurant\\Fast Food Restaurant\\obj\\",
+      "projectPath": "C:\\Users\\pratik\\Desktop\\restaurantbilling-main\\FastFoodKitchen\\Fast Food Restaurant\\Fast Food Restaurant\\Fast Food Restaurant.vbproj",
+      "packagesPath": "C:\\Users\\pratik\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\pratik\\Desktop\\restaurantbilling-main\\FastFoodKitchen\\Fast Food Restaurant\\Fast Food Restaurant\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\pratik\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

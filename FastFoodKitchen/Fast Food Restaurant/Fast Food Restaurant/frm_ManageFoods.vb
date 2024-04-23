@@ -15,13 +15,16 @@ Public Class frm_ManageFoods
             cmd = New MySqlCommand("SELECT `foodcode`, `foodname`, `price` FROM `tbl_food`", conn)
             dr = cmd.ExecuteReader
             While dr.Read
-                DataGridView1.Rows.Add(DataGridView1.Rows.Count + 1, dr.Item("foodcode"), dr.Item("foodname"), dr.Item("price"))
+                Dim price As Decimal = dr.Item("price")
+                Dim formattedPrice As String = "रु " & price.ToString("N2")
+                DataGridView1.Rows.Add(DataGridView1.Rows.Count + 1, dr.Item("foodcode"), dr.Item("foodname"), formattedPrice)
             End While
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
         conn.Close()
     End Sub
+
     Private Sub pic_foodimg_Click(sender As Object, e As EventArgs) Handles pic_foodimg.Click
         Dim pop As OpenFileDialog = New OpenFileDialog
         If pop.ShowDialog <> Windows.Forms.DialogResult.Cancel Then
